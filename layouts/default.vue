@@ -1,9 +1,18 @@
 <template>
   <div>
-    <Nuxt />
+    <Gnav />
+    <nuxt />
   </div>
 </template>
+<script>
+import Gnav from '~/components/Gnav.vue'
 
+export default {
+  components: {
+    Gnav,
+  },
+}
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -15,6 +24,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background-color: #faf4f0;
 }
 
 *,

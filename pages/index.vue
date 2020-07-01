@@ -3,9 +3,9 @@
     <div>
       <Logo />
       <h1 class="title">
-        qutti96-github-io
+        qutti96_github_io
       </h1>
-      <div class="links">
+      <!-- <div class="links">
         <a
           href="https://nuxtjs.org/"
           target="_blank"
@@ -22,7 +22,7 @@
         >
           GitHub
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
