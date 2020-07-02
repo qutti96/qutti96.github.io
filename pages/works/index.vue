@@ -46,7 +46,7 @@
                     [成果・学んだこと]
                   </dt>
                   <dd class="card-detail__txt">
-                    成果確認中
+                    PVは1.5～2倍近く上昇。CV（お問い合わせ完了）は増加せず。
                   </dd>
                   <dt class="card-detail__title has-text-weight-semibold">
                     [フレームワーク・ツール]
@@ -104,7 +104,7 @@
                     [成果・学んだこと]
                   </dt>
                   <dd class="card-detail__txt">
-                    成果確認中
+                    PVは1.5～2倍近く上昇。CV（お問い合わせ完了）は増加せず。
                   </dd>
                   <dt class="card-detail__title has-text-weight-semibold">
                     [フレームワーク・ツール]
