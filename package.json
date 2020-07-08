@@ -27,12 +27,16 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/bulma": "^1.2.7",
-    "nuxt": "^2.13.0"
+    "core-js": "^2.6.5",
+    "firebase": "^7.15.5",
+    "nuxt": "^2.13.0",
+    "vuetify": "^2.3.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/vuetify": "^1.11.2",
     "@wdio/cli": "^6.1.19",
     "@wdio/local-runner": "^6.1.19",
     "@wdio/mocha-framework": "^6.1.19",

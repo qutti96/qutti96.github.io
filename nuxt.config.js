@@ -64,6 +64,8 @@ export default {
     '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    // Doc: https://vuetifyjs.com/
+    '@nuxtjs/vuetify',
   ],
   /*
    ** Axios module configuration
