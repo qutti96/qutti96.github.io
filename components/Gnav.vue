@@ -51,9 +51,9 @@
         <a class="navbar-item gnav__anchor is-size-3" href="/works">
           Works
         </a>
-        <!-- <a class="navbar-item" href="/contact">
+        <a class="navbar-item gnav__anchor is-size-3" href="/contact">
           Contact
-        </a> -->
+        </a>
         <!-- <div class="navbar-item">
           <div class="buttons">
             <a class="button is-primary">

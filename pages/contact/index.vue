@@ -2,6 +2,9 @@
   <section class="container">
     <div class="container">
       <h1 class="title">Contact</h1>
+      <div class="content">
+        <p>サイトの制作依頼やご相談など、お気軽にお問いあわせください。</p>
+      </div>
       <v-app>
         <v-content>
           <v-card>
