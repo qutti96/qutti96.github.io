@@ -144,6 +144,13 @@ export default {
 .theme--light.v-application {
   background-color: transparent;
 }
+.v-application .info {
+  background-color: #84abad !important;
+}
+
+.v-application .success {
+  background-color: #84abad !important;
+}
 
 .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
   color: #fff;
