@@ -84,12 +84,6 @@ export default {
 </script>
 
 <style scoped>
-.navbar {
-  background-color: #faf4f0;
-}
-.navbar-menu {
-  background-color: #faf4f0;
-}
 .logo__wrap {
   display: block;
   background-color: transparent;

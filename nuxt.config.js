@@ -24,6 +24,11 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
+    script: [
+      {
+        src: 'https://unpkg.com/ionicons@5.1.2/dist/ionicons.js',
+      },
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
@@ -31,6 +36,7 @@ export default {
         href:
           'https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap',
       },
+      {},
     ],
   },
   /*

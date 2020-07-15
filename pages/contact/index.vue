@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="section">
     <div class="container">
       <h1 class="title">Contact</h1>
       <div class="content">
@@ -52,7 +52,7 @@
             bottom
             right
             :timeout="6000"
-            class="font-weight-bold"
+            class="font-weight-bold snack__main"
           >
             {{ snackBar.message }}
           </v-snackbar>
@@ -144,12 +144,8 @@ export default {
 .theme--light.v-application {
   background-color: transparent;
 }
-.v-application .info {
-  background-color: #84abad !important;
-}
-
-.v-application .success {
-  background-color: #84abad !important;
+.snack__main .success {
+  background-color: #ad9d84 !important;
 }
 
 .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {

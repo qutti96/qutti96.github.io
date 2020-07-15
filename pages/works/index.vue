@@ -535,12 +535,6 @@
   </section>
 </template>
 <style scoped>
-.section {
-  background-color: #faf4f0;
-}
-.title {
-  font-family: 'Pinyon Script', cursive;
-}
 .card-image {
   /* border-bottom: 1px solid #bab6b3; */
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
