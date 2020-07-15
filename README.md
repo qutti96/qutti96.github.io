@@ -1,5 +1,13 @@
 # qutti96-github-io
-
+This is qutti96's portfolio site.
+[qutti96's portfolio site](https://qutti96.github.io/)
+## Stack
+### Server side
+Node.js
+### Front end
+Vue/Nuxt.js
+### Other
+Circle CI, Git
 ## Build Setup
 
 ```bash
