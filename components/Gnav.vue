@@ -4,8 +4,8 @@
       <a class="navbar-item logo__wrap" href="#">
         <img
           class="logo__img"
-          src="~/assets/images/common/qutti96-logo.svg"
-          alt="qutti96 portfolio"
+          src="~/assets/images/common/qutti96-logo.png"
+          alt="qutti96's portfolio"
         />
       </a>
       <a
@@ -91,7 +91,7 @@ export default {
 }
 .logo__img {
   width: auto;
-  height: 60px;
+  height: 30px;
 }
 .gnav__anchor {
   background-color: transparent;
