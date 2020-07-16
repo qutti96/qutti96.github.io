@@ -184,8 +184,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="columns">
         <div class="column">
           <div class="card">
             <a
@@ -352,8 +350,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="columns">
         <div class="column">
           <div class="card">
             <a
@@ -535,6 +531,14 @@
   </section>
 </template>
 <style scoped>
+.columns {
+  flex-wrap: wrap;
+}
+.column {
+  flex-basis: 33%;
+  margin-bottom: 1rem;
+}
+
 .card-image {
   /* border-bottom: 1px solid #bab6b3; */
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
@@ -563,12 +567,9 @@
 }
 
 .label-group {
-  /* position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2; */
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
   justify-content: flex-end;
   margin-bottom: 0;
 }
@@ -577,10 +578,9 @@
   font-weight: 600;
   padding: 3px 5px;
   margin-right: 3px;
-  display: flex-inline;
+  display: inline-flex;
   color: #fff;
-
-  /* background-color: #d2e5ec; */
+  margin-bottom: 3px;
   background-color: #84abad;
 }
 .list-arrow {
