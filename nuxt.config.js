@@ -77,7 +77,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    // proxyHeaders: false
+  },
   router: {
     base: '/',
   },

@@ -527,9 +527,23 @@
           </div>
         </div>
       </div>
+      <p>----------コンポーネントここから----------</p>
+      <Workscolumn />
+      <p>----------コンポーネントここまで----------</p>
     </div>
   </section>
 </template>
+
+<script>
+import Workscolumn from '~/components/Workscolumn.vue'
+
+export default {
+  components: {
+    Workscolumn,
+  },
+}
+</script>
+
 <style scoped>
 .columns {
   flex-wrap: wrap;

@@ -1,0 +1,32 @@
+[
+  { "id": 1,
+    "url": "https://shikinchoutatsu-lab.jp/",
+    "img": "/_nuxt/assets/images/works/lab-pc.jpg",
+    "title": "金融サイトSEO対策 Wordpressテンプレート改修",
+    "member": "PM1名・DR1名・COD1名",
+    "detail_txt": "WordPressサイトのテンプレートを改修し、SEO内部対策を施した。<ul class='card-detail__list'><li>サイトマップ設定</li><li>パンくず・タイトル・メタ設定</li><li>URL正規化</li></ul>など...", "achievement": "PVは1.5～2倍近く上昇。CV（お問い合わせ完了）は増加せず。",
+    "framework": "WordPress",
+    "label": "wordpress,coding,responsive,"
+  },
+  {
+    "id": 2,
+    "url": "https://factoring-hikaku.jp/",
+    "img": "/_nuxt/assets/images/works/factoring.jpg",
+    "title": "金融サイトSEO対策 Wordpressテンプレート改修 / KVバナー制作",
+    "member": "PM1名・DR1名・COD1名",
+    "detail_txt": "WordPressサイトのテンプレートを改修し、SEO内部対策を施した。トップページのhero画像も制作した。<ul class='card-detail__list'><li>サイトマップ設定</li><li>パンくず・タイトル・メタ設定</li><li>URL正規化</li></ul>など...", "achievement": "PVは1.5～2倍近く上昇。CV（お問い合わせ完了）は増加せず。",
+    "framework": "WordPress",
+    "label": "wordpress,coding,responsive,"
+  },
+  {
+    "id": 3, "url": "https://www.omni7.jp/top",
+    "img": "/_nuxt/assets/images/works/om_pc.jpg",
+    "title": "総合ECサイト テンプレート改修 制作進行管理",
+    "member": "PM1名・DR1名・COD1名・PG(Javascript)1名",
+    "detail_txt": "SIer社にフロントエンドチームとして出向し、システムテンプレートの改修の制作進行、調査など行う。<ul class='card-detail__list'><li>jqueryバージョンアップ調査</li><li>画像検索SEO・画像遅延ロード</li></ul>",
+    "achievement": "サイト規模が大きいため、CSSファイル更新の際の影響範囲調査と複数案件が平行した際の共通CSSファイル、jsファイルのバージョン管理、スケジュール管理が求められた。",
+    "framework": "backlog/redmine/PowerPoint",
+    "label": "direction,coding,"
+  }
+]
+
