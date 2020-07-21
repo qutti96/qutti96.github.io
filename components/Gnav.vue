@@ -4,7 +4,7 @@
       <a class="navbar-item logo__wrap" href="#">
         <img
           class="logo__img"
-          src="~/assets/images/common/qutti96-logo.png"
+          src="images/common/qutti96-logo.png"
           alt="qutti96's portfolio"
         />
       </a>

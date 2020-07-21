@@ -15,7 +15,7 @@
               rel="noopener noreferrer"
             >
               <figure class="image is-4by3">
-                <img src="~/assets/images/works/lab-pc.jpg" alt="" />
+                <img src="images/works/lab-pc.jpg" alt="" />
               </figure>
             </a>
             <div class="card-content label-wrap">
@@ -73,7 +73,7 @@
               rel="noopener noreferrer"
             >
               <figure class="image is-4by3">
-                <img src="~/assets/images/works/factoring.jpg" alt="" />
+                <img src="images/works/factoring.jpg" alt="" />
               </figure>
             </a>
             <div class="card-content label-wrap">
@@ -131,7 +131,7 @@
               rel="noopener noreferrer"
             >
               <figure class="image is-4by3">
-                <img src="~/assets/images/works/om_pc.jpg" alt="" />
+                <img src="images/works/om_pc.jpg" alt="" />
               </figure>
             </a>
             <div class="card-content label-wrap">
@@ -193,7 +193,7 @@
               rel="noopener noreferrer"
             >
               <figure class="image is-4by3">
-                <img src="~/assets/images/works/gfd-dp.jpg" alt="" />
+                <img src="images/works/gfd-dp.jpg" alt="" />
               </figure>
             </a>
             <div class="card-content">
@@ -246,7 +246,7 @@
               rel="noopener noreferrer"
             >
               <figure class="image is-4by3">
-                <img src="~/assets/images/works/uxscool.jpg" alt="uxschool" />
+                <img src="images/works/uxscool.jpg" alt="uxschool" />
               </figure>
             </a>
             <div class="card-content">
@@ -299,7 +299,7 @@
               rel="noopener noreferrer"
             >
               <figure class="image is-4by3">
-                <img src="~/assets/images/works/deli-pc.jpg" alt="" />
+                <img src="images/works/deli-pc.jpg" alt="" />
               </figure>
             </a>
             <div class="card-content">
@@ -359,7 +359,7 @@
               rel="noopener noreferrer"
             >
               <figure class="image is-4by3">
-                <img src="~/assets/images/works/com-tv.jpg" alt="" />
+                <img src="images/works/com-tv.jpg" alt="" />
               </figure>
             </a>
             <div class="card-content">
@@ -425,7 +425,7 @@
               rel="noopener noreferrer"
             >
               <figure class="image is-4by3">
-                <img src="~/assets/images/works/notviewable.jpg" alt="" />
+                <img src="images/works/notviewable.jpg" alt="" />
               </figure>
             </a>
             <div class="card-content">
@@ -481,7 +481,7 @@
               rel="noopener noreferrer"
             >
               <figure class="image is-4by3">
-                <img src="~/assets/images/works/br-pc.jpg" alt="" />
+                <img src="images/works/br-pc.jpg" alt="" />
               </figure>
             </a>
             <div class="card-content">

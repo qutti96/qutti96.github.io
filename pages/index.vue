@@ -23,7 +23,7 @@
             <figure class="media-left about__media">
               <p class="image is-128x128">
                 <img
-                  src="~/assets/images/top/bio_illust_square_2020.jpg"
+                  src="images/top/bio_illust_square_2020.jpg"
                   class="is-rounded"
                   alt=""
                 />
@@ -168,7 +168,7 @@ export default {}
 }
 
 .kv-top {
-  background: url(~assets/images/top/kv_top.jpg) 0 0 no-repeat;
+  background: url(/images/top/kv_top.jpg) 0 0 no-repeat;
   height: 260px;
   position: relative;
   background-size: cover;
