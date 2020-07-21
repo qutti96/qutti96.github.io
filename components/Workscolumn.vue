@@ -31,9 +31,7 @@
               <dt class="card-detail__title has-text-weight-semibold">
                 [成果・学んだこと]
               </dt>
-              <dd class="card-detail__txt">
-                {{ item.achievement }}
-              </dd>
+              <dd class="card-detail__txt" v-html="item.achievement"></dd>
               <dt class="card-detail__title has-text-weight-semibold">
                 [フレームワーク・ツール]
               </dt>

@@ -259,7 +259,7 @@
                     [メンバー構成]
                   </dt>
                   <dd class="card-detail__txt">
-                    DR1/COD/DE 1名
+                    DR・COD・DE 1名
                   </dd>
                   <dt class="card-detail__title has-text-weight-semibold">
                     [業務内容]
@@ -338,7 +338,7 @@
                     [フレームワーク・ツール]
                   </dt>
                   <dd class="card-detail__txt">
-                    html/css/
+                    html/css
                   </dd>
                 </dl>
                 <div class="label-group">
