@@ -41,7 +41,11 @@
                 {{ item.framework }}
               </dd>
             </dl>
-            <div class="label-group" v-html="SetLabel(item.label)"></div>
+            <div class="label-group">
+              <template v-for="tag in item.label.split(',')">
+                <span :key="tag" class="label-type">{{ tag }}</span>
+              </template>
+            </div>
           </div>
         </div>
       </div>
@@ -71,16 +75,6 @@ export default {
   //       console.error(e)
   //     })
   // },
-  methods: {
-    SetLabel(txt) {
-      const filterArray = txt.split(',')
-      let newHtml = ''
-      for (let i = 0; i < filterArray.length - 1; i++) {
-        newHtml += '<div class="label-type">' + filterArray[i] + '</div>'
-      }
-      return newHtml
-    },
-  },
 }
 </script>
 
