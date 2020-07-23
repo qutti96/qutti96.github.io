@@ -101,7 +101,7 @@ export default {
     }
   },
   methods: {
-    checkForm: (e) => {
+    checkForm() {
       let nameFlag = false
       let emailFlag = false
       let inquiryFlag = false
@@ -109,6 +109,7 @@ export default {
         this.Validation.NameResult = 'お名前は入力必須項目です。'
       } else {
         nameFlag = true // eslint-disable-line no-unused-vars
+        this.Validation.NameResult = ''
       }
 
       if (!this.ContactForm.email) {
@@ -118,19 +119,28 @@ export default {
           'メールアドレスを正しい形式でご入力ください。'
       } else {
         emailFlag = true // eslint-disable-line no-unused-vars
+        this.Validation.EmailResult = ''
       }
 
       if (!this.ContactForm.inquiry) {
         this.Validation.InquiryResult = 'お問い合わせ内容は入力必須項目です。'
       } else {
         inquiryFlag = true // eslint-disable-line no-unused-vars
+        this.Validation.InquiryResult = ''
       }
 
       if (nameFlag && emailFlag && inquiryFlag) {
         this.Validation.NameResult = ''
         this.Validation.EmailResult = ''
         this.Validation.InquiryResult = ''
-        alert(this.ContactForm.email + 'で送信しました')
+        alert(
+          this.ContactForm.name +
+            '\n' +
+            this.ContactForm.email +
+            '\n' +
+            this.ContactForm.inquiry +
+            'で送信しました'
+        )
       }
       event.preventDefault()
     },
