@@ -72,9 +72,7 @@
                 @click="checkForm"
               />
             </div>
-            <!-- <div class="control">
-              <button class="button is-link is-light">Cancel</button>
-            </div> -->
+            <p class="help is-success is-size-6">{{ snackBar.message }}</p>
           </div>
         </form>
       </div>
@@ -83,8 +81,7 @@
 </template>
 
 <script>
-// import { functions } from '@/plugins/firebase'
-
+import { functions } from '@/plugins/firebase'
 export default {
   data() {
     return {
@@ -97,6 +94,9 @@ export default {
         NameResult: '',
         EmailResult: '',
         InquiryResult: '',
+      },
+      snackBar: {
+        message: '',
       },
     }
   },
@@ -133,53 +133,45 @@ export default {
         this.Validation.NameResult = ''
         this.Validation.EmailResult = ''
         this.Validation.InquiryResult = ''
-        alert(
-          this.ContactForm.name +
-            '\n' +
-            this.ContactForm.email +
-            '\n' +
-            this.ContactForm.inquiry +
-            'で送信しました'
-        )
+        this.sendMail()
       }
       event.preventDefault()
     },
     validEmail: (inputdata) => {
-      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      const re = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/
+      // const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return re.test(inputdata)
     },
-
-    // sendMail() {
-    //   if (this.$refs.form.validate()) {
-    //     this.contactForm.loading = true
-    //     const mailer = functions.httpsCallable('sendMail')
-    //     mailer(this.contactForm)
-    //       .then(() => {
-    //         this.formReset()
-    //         this.showSnackBar(
-    //           'success',
-    //           'お問い合わせありがとうございます。送信完了しました'
-    //         )
-    //       })
-    //       .catch((err) => {
-    //         this.showSnackBar(
-    //           'error',
-    //           '送信に失敗しました。時間をおいて再度お試しください'
-    //         )
-    //         console.log(err)
-    //       })
-    //       .finally(() => {
-    //         this.contactForm.loading = false
-    //       })
-    //   }
-    // },
+    formReset() {
+      this.ContactForm.name = ''
+      this.ContactForm.email = ''
+      this.ContactForm.inquiry = ''
+    },
+    sendMail() {
+      const mailer = functions.httpsCallable('sendMail')
+      mailer(this.ContactForm)
+        .then(() => {
+          this.snackBar.message =
+            this.ContactForm.name +
+            ' / ' +
+            this.ContactForm.email +
+            ' / ' +
+            this.ContactForm.inquiry +
+            '\n' +
+            '以上の内容で送信しました。'
+          this.formReset()
+        })
+        .catch((err) => {
+          this.snackBar.message = '送信に失敗しました。'
+          console.log(err)
+        })
+      // .finally(() => {
+      // })
+    },
     // showSnackBar(color, message) {
     //   this.snackBar.message = message
     //   this.snackBar.color = color
     //   this.snackBar.show = true
-    // },
-    // formReset() {
-    //   this.$refs.form.reset()
     // },
   },
 }
