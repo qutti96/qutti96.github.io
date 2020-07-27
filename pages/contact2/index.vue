@@ -50,12 +50,12 @@
             </p>
           </div>
           <div class="field">
-            <label for="inquiry" class="label">お問いあわせ内容</label>
+            <label for="contents" class="label">お問いあわせ内容</label>
             <div class="control">
               <textarea
-                id="inquiry"
-                v-model="ContactForm.inquiry"
-                name="inquiry"
+                id="contents"
+                v-model="ContactForm.contents"
+                name="contents"
                 class="textarea"
                 placeholder="お問いあわせ内容をご記入ください"
               >
@@ -88,7 +88,7 @@ export default {
       ContactForm: {
         name: null,
         email: null,
-        inquiry: null,
+        contents: null,
       },
       Validation: {
         NameResult: '',
@@ -104,7 +104,7 @@ export default {
     checkForm() {
       let nameFlag = false
       let emailFlag = false
-      let inquiryFlag = false
+      let contentsFlag = false
       if (!this.ContactForm.name) {
         this.Validation.NameResult = 'お名前は入力必須項目です。'
       } else {
@@ -122,14 +122,14 @@ export default {
         this.Validation.EmailResult = ''
       }
 
-      if (!this.ContactForm.inquiry) {
+      if (!this.ContactForm.contents) {
         this.Validation.InquiryResult = 'お問い合わせ内容は入力必須項目です。'
       } else {
-        inquiryFlag = true // eslint-disable-line no-unused-vars
+        contentsFlag = true // eslint-disable-line no-unused-vars
         this.Validation.InquiryResult = ''
       }
 
-      if (nameFlag && emailFlag && inquiryFlag) {
+      if (nameFlag && emailFlag && contentsFlag) {
         this.Validation.NameResult = ''
         this.Validation.EmailResult = ''
         this.Validation.InquiryResult = ''
@@ -145,7 +145,7 @@ export default {
     formReset() {
       this.ContactForm.name = ''
       this.ContactForm.email = ''
-      this.ContactForm.inquiry = ''
+      this.ContactForm.contents = ''
     },
     sendMail() {
       const mailer = functions.httpsCallable('sendMail')
@@ -156,7 +156,7 @@ export default {
             ' / ' +
             this.ContactForm.email +
             ' / ' +
-            this.ContactForm.inquiry +
+            this.ContactForm.contents +
             '\n' +
             '以上の内容で送信しました。'
           this.formReset()

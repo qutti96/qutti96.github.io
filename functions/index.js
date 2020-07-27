@@ -24,7 +24,7 @@ ${data.name}
 ${data.email}
 
 内容：
-${data.inquiry}
+${data.contents}
 `
 }
 
