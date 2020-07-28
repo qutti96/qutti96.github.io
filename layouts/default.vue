@@ -56,4 +56,10 @@ html {
   bottom: 0;
   left: -3px;
 }
+
+.card-detail__list {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  font-size: 0.875rem;
+}
 </style>

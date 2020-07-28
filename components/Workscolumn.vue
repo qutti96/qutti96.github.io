@@ -84,7 +84,6 @@ export default {
   flex-basis: 33%;
   margin-bottom: 1rem;
 }
-
 .card-image {
   /* border-bottom: 1px solid #bab6b3; */
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
@@ -97,17 +96,11 @@ export default {
   margin-left: 0;
   margin-bottom: 1rem;
 }
-
 .card-detail__list {
   margin-top: 0.5rem;
   margin-left: 1.5rem;
   font-size: 0.875rem;
 }
-
-.label-wrap {
-  /* position: relative; */
-}
-
 .label-group {
   display: flex;
   width: 100%;
@@ -135,18 +128,12 @@ export default {
   position: absolute;
   top: 50%;
   right: 4%;
-
-  /* margin-top: -10px; */
   content: '';
   display: block;
   width: 30px;
   height: 30px;
   border-top: 2px solid #ada095;
   border-right: 2px solid #ada095;
-
-  /* border-top: 2px solid #c7bcb3;
-  border-right: 2px solid #c7bcb3;
- */
   transform: rotate(45deg);
 }
 .blur {
