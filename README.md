@@ -6,6 +6,10 @@ This is qutti96's portfolio site.
 Node.js
 ### Front end
 Vue/Nuxt.js
+### mobile Backend as a Service（mBaaS）
+Firebase
+### Linter
+eslint, prettier, stylelint
 ### Other
 Circle CI, Git
 ## Build Setup
