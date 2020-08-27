@@ -4,120 +4,175 @@
       <h1 class="title">Contact</h1>
       <div class="content">
         <p>サイトの制作依頼やご相談など、お気軽にお問いあわせください。</p>
-      </div>
-      <v-app>
-        <v-content>
-          <v-card>
-            <v-container>
-              <v-form
-                ref="form"
-                v-model="contactFormValidation.valid"
-                lazy-validation
+        <form
+          id="contactForm"
+          action=""
+          method="post"
+          novalidate="true"
+          @submit.prevent
+        >
+          <div class="field">
+            <label for="name" class="label">お名前</label>
+            <div class="control has-icons-left has-icons-right">
+              <input
+                id="name"
+                v-model="ContactForm.name"
+                name="name"
+                class="input"
+                type="text"
+                placeholder="お名前を入力してください"
+                value=""
+              />
+              <span class="icon is-small is-left">
+                <ion-icon name="person-outline"></ion-icon>
+              </span>
+            </div>
+            <p class="help is-danger">{{ Validation.NameResult }}</p>
+          </div>
+          <div class="field">
+            <label for="email" class="label">Emailアドレス</label>
+            <div class="control has-icons-left has-icons-right">
+              <input
+                id="email"
+                v-model="ContactForm.email"
+                name="email"
+                class="input"
+                type="email"
+                placeholder="Emailアドレスをご入力ください"
+                value=""
+              />
+              <span class="icon is-small is-left">
+                <ion-icon name="mail-outline"></ion-icon>
+              </span>
+            </div>
+            <p class="help is-danger">
+              {{ Validation.EmailResult }}
+            </p>
+          </div>
+          <div class="field">
+            <label for="contents" class="label">お問いあわせ内容</label>
+            <div class="control">
+              <textarea
+                id="contents"
+                v-model="ContactForm.contents"
+                name="contents"
+                class="textarea"
+                placeholder="お問いあわせ内容をご記入ください"
               >
-                <v-text-field
-                  v-model="contactForm.name"
-                  :rules="contactFormValidation.nameRules"
-                  label="名前"
-                  required
-                ></v-text-field>
-                <v-text-field
-                  v-model="contactForm.email"
-                  :rules="contactFormValidation.emailRules"
-                  label="メールアドレス"
-                  required
-                ></v-text-field>
-                <v-textarea
-                  v-model="contactForm.contents"
-                  :rules="contactFormValidation.contentsRules"
-                  label="内容"
-                  required
-                ></v-textarea>
-                <v-btn
-                  :loading="contactForm.loading"
-                  :disabled="!contactFormValidation.valid"
-                  block
-                  large
-                  color="info"
-                  class="mt-4 font-weight-bold is-size-6"
-                  @click="sendMail()"
-                >
-                  送信
-                </v-btn>
-              </v-form>
-            </v-container>
-          </v-card>
-          <v-snackbar
-            v-model="snackBar.show"
-            :color="snackBar.color"
-            bottom
-            right
-            :timeout="6000"
-            class="font-weight-bold snack__main"
-          >
-            {{ snackBar.message }}
-          </v-snackbar>
-        </v-content>
-      </v-app>
+              </textarea>
+            </div>
+            <p class="help is-danger">{{ Validation.InquiryResult }}</p>
+          </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <input
+                type="submit"
+                value="送信"
+                class="button is-link"
+                @click="checkForm"
+              />
+            </div>
+            <p class="help is-success is-size-6">{{ snackBar.message }}</p>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import { functions } from '@/plugins/firebase'
-
 export default {
-  data: () => ({
-    contactForm: {
-      name: '',
-      contents: '',
-      email: '',
-      loading: false,
-    },
-    contactFormValidation: {
-      valid: false,
-      nameRules: [(v) => !!v || '名前は必須項目です'],
-      emailRules: [(v) => !!v || 'メールアドレスは必須項目です'],
-      contentsRules: [(v) => !!v || '内容は必須項目です'],
-    },
-    snackBar: {
-      show: false,
-      color: '',
-      message: '',
-    },
-  }),
+  data() {
+    return {
+      ContactForm: {
+        name: null,
+        email: null,
+        contents: null,
+      },
+      Validation: {
+        NameResult: '',
+        EmailResult: '',
+        InquiryResult: '',
+      },
+      snackBar: {
+        message: '',
+      },
+    }
+  },
   methods: {
-    sendMail() {
-      if (this.$refs.form.validate()) {
-        this.contactForm.loading = true
-        const mailer = functions.httpsCallable('sendMail')
-        mailer(this.contactForm)
-          .then(() => {
-            this.formReset()
-            this.showSnackBar(
-              'success',
-              'お問い合わせありがとうございます。送信完了しました'
-            )
-          })
-          .catch((err) => {
-            this.showSnackBar(
-              'error',
-              '送信に失敗しました。時間をおいて再度お試しください'
-            )
-            console.log(err)
-          })
-          .finally(() => {
-            this.contactForm.loading = false
-          })
+    checkForm() {
+      let nameFlag = false
+      let emailFlag = false
+      let contentsFlag = false
+      if (!this.ContactForm.name) {
+        this.Validation.NameResult = 'お名前は入力必須項目です。'
+      } else {
+        nameFlag = true // eslint-disable-line no-unused-vars
+        this.Validation.NameResult = ''
       }
+
+      if (!this.ContactForm.email) {
+        this.Validation.EmailResult = 'メールアドレスは入力必須項目です。'
+      } else if (!this.validEmail(this.ContactForm.email)) {
+        this.Validation.EmailResult =
+          'メールアドレスを正しい形式でご入力ください。'
+      } else {
+        emailFlag = true // eslint-disable-line no-unused-vars
+        this.Validation.EmailResult = ''
+      }
+
+      if (!this.ContactForm.contents) {
+        this.Validation.InquiryResult = 'お問い合わせ内容は入力必須項目です。'
+      } else {
+        contentsFlag = true // eslint-disable-line no-unused-vars
+        this.Validation.InquiryResult = ''
+      }
+
+      if (nameFlag && emailFlag && contentsFlag) {
+        this.Validation.NameResult = ''
+        this.Validation.EmailResult = ''
+        this.Validation.InquiryResult = ''
+        this.sendMail()
+      }
+      event.preventDefault()
     },
-    showSnackBar(color, message) {
-      this.snackBar.message = message
-      this.snackBar.color = color
-      this.snackBar.show = true
+    validEmail: (inputdata) => {
+      const re = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/
+      // const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return re.test(inputdata)
     },
     formReset() {
-      this.$refs.form.reset()
+      this.ContactForm.name = ''
+      this.ContactForm.email = ''
+      this.ContactForm.contents = ''
     },
+    sendMail() {
+      const mailer = functions.httpsCallable('sendMail')
+      mailer(this.ContactForm)
+        .then(() => {
+          this.snackBar.message =
+            this.ContactForm.name +
+            ' / ' +
+            this.ContactForm.email +
+            ' / ' +
+            this.ContactForm.contents +
+            '\n' +
+            '以上の内容で送信しました。'
+          this.formReset()
+        })
+        .catch((err) => {
+          this.snackBar.message = '送信に失敗しました。'
+          console.log(err)
+        })
+      // .finally(() => {
+      // })
+    },
+    // showSnackBar(color, message) {
+    //   this.snackBar.message = message
+    //   this.snackBar.color = color
+    //   this.snackBar.show = true
+    // },
   },
 }
 </script>

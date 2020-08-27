@@ -71,7 +71,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://vuetifyjs.com/
-    '@nuxtjs/vuetify',
+    // '@nuxtjs/vuetify',
   ],
   /*
    ** Axios module configuration
