@@ -176,8 +176,8 @@ export default {}
 
 .kv-title {
   position: absolute;
-  top: 600%;
-  right: 0%;
+  top: 165px;
+  right: 16px;
   display: block;
   font-size: 3em;
   font-family: 'Pinyon Script', cursive;
@@ -193,8 +193,8 @@ export default {}
     height: 180px;
   }
   .kv-title {
-    top: 220%;
-    right: 0%;
+    top: 85px;
+    right: 5%;
     font-size: 2.6em;
     padding: 0.4em 0.6em 0.4em 0.6em;
   }
