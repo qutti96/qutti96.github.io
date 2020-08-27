@@ -176,7 +176,7 @@ export default {}
 
 .kv-title {
   position: absolute;
-  top: 165px;
+  top: 102px;
   right: 16px;
   display: block;
   font-size: 3em;
@@ -193,7 +193,7 @@ export default {}
     height: 180px;
   }
   .kv-title {
-    top: 85px;
+    top: 42px;
     right: 5%;
     font-size: 2.6em;
     padding: 0.4em 0.6em 0.4em 0.6em;
