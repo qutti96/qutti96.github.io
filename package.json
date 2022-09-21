@@ -30,7 +30,7 @@
     "core-js": "^2.6.5",
     "firebase": "^7.15.5",
     "nuxt": "^2.13.0",
-    "vuetify": "^2.3.4"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
